@@ -1,5 +1,5 @@
 # react-one-webapp
-基于React开发的仿「ONE · 一个」桌面端网站，先看效果图：
+基于React开发的仿「ONE · 一个」桌面端网站，用到的服务端API是 [one-api](https://github.com/gongph/one-api) 本项目是开源仅供学习之用，没有任何商业用途，如果其中有任何侵权行为，请告知，必将及时删除。先一起看效果图：
 
 ![one](./assets/img/one.gif)
 
@@ -12,6 +12,7 @@
 都用到了哪些框架或工具呢，总结一下有以下几点：
 
 [Yarn](https://yarn.bootcss.com/)
+
 [Webpack@3.4.1](https://webpack.bootcss.com/)
 
 [React](https://react.bootcss.com/react/docs/hello-world.html)
@@ -23,11 +24,9 @@
 
 - react-router-dom@4.1.2
 
+Jquery
 
 [Bootstrap](http://www.bootcss.com/)
-
-- [bootstrap.min.css@3.2.0](https://github.com/gongph/react-one-webapp/tree/master/assets/css)
-- bootstrap.min.css@3.3.7
 
 ## How?
 按照下面命令在本地运行并查看效果：
@@ -38,6 +37,8 @@ $ npm i yarn -g
 $ yarn install
 $ npm run start
 ```
+
+如果你对React学习感兴趣的话，欢迎 Fork 我的代码。另外如果你有什么意见或建议的话，欢迎提交 [Issues](https://github.com/gongph/react-one-webapp/issues)
 
 ## LICENSE
 Copyright (c) 2017 Mr.gongph
