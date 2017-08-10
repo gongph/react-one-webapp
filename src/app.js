@@ -5,6 +5,8 @@ import IndexPage from './components/IndexPage.js'
 import Article from './components/Article.js'
 import Question from './components/Question.js'
 import About from './components/About.js'
+import Politica from './components/Politica.js'
+import Contacto from './components/Contacto.js'
 
 render((
   <Router>
@@ -13,6 +15,8 @@ render((
       <Route path="/article/:id" component={Article}/>
       <Route path="/question/:id" component={Question}/>
       <Route path="/acercade" component={About}/>
+      <Route path="/politica" component={Politica}/>
+      <Route path="/contacto" component={Contacto}/>
     </div>
   </Router>
 ), document.getElementById('app'))
