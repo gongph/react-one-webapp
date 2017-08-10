@@ -1,4 +1,5 @@
 import React from 'react' 
+import { Link } from 'react-router-dom'
 import { getQuestions } from '../model/question.js'
 
 /**
@@ -11,9 +12,9 @@ class FirstQuestion extends React.Component {
       <div className="corriente">
         <p className="one-titulo">{'VOL.' + this.props.vol}</p>
           <p className="one-cuestion-titulo">
-            <a href={'/question/' + this.props.question.question_id}>
+            <Link to={'/question/' + this.props.question.question_id}>
               {this.props.question.question_title}
-            </a>
+            </Link>
           </p>
       </div>
     )
@@ -25,9 +26,9 @@ class QuestionItem extends React.Component {
     return (
       <li>
         <span className="text-muted">{'VOL.' + this.props.vol} </span>
-        <a href={'/question/' + this.props.question.question_id}>
+        <Link to={'/question/' + this.props.question.question_id}>
           {this.props.question.question_title}
-        </a>
+        </Link>
       </li>
     )
   }
