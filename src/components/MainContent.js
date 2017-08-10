@@ -1,7 +1,7 @@
 import React from 'react'
 import path from 'path'
 import Hp from './Hp.js'
-import Essays from './Essays.js'
+import Articles from './Articles.js'
 import Questions from './Questions.js'
 import { getHps } from '../model/hp.js'
 
@@ -19,7 +19,7 @@ export default class MainContent extends React.Component {
   }
 
   componentDidMount () {
-    getHps((response) => {
+    getHps().then((response) => {
       this.setState({
         hps: response.data,
         vol: Number(response.data[0].hp_title.split('.')[1])
@@ -36,7 +36,7 @@ export default class MainContent extends React.Component {
         <div className="col-md-4">
           <div className="row">
             <div className="col-md-12">
-              <Essays vol={this.state.vol}/>
+              <Articles vol={this.state.vol}/>
               <Questions vol={this.state.vol}/>
             </div>
           </div>
