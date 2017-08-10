@@ -1,4 +1,5 @@
 import React from 'react' 
+import { Link } from 'react-router-dom'
 
 /**
  * footer
@@ -12,9 +13,9 @@ export default class Footer extends React.Component {
           <hr/>
           <p className="text-muted"> © 2012-2014 <a href="http://wufazhuce.com/">「ONE · 一个」</a></p>
           <p className="text-muted">
-            <a href="/acercade">关于</a>
-            <a href="/politica">用户协议</a>
-            <a href="/contacto">联系我们</a>
+            <Link to="/acercade">关于</Link>
+            <Link to="/politica">用户协议</Link>
+            <Link to="/contacto">联系我们</Link>
           </p>
           <p className="text-muted">
             <a href="http://weibo.com/duchangtuanparty" target="_blank">一个App工作室</a>
