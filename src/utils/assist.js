@@ -11,4 +11,36 @@ function retLastYearMonthStr () {
   return yearMonthStr
 }
 
-export { retLastYearMonthStr }
+function getJson (url) {
+  let promise = new Promise((resolve, reject) => {
+    let client = new XMLHttpRequest()
+    client.open("GET", url)
+    client.onreadystatechange = handler
+    client.responseType = "json"
+    client.setRequestHeader("Accept", "application/json")
+    client.send()
+
+    function handler () {
+      if (this.readyState !== 4) {
+        return;
+      }
+      if (this.status === 200) {
+        resolve(this.response)
+      } else {
+        reject(new Error(this.statusText))
+      }
+    }
+  })
+  return promise
+}
+
+function getArticleEditor (ai, editorEmail) {
+  if (!ai) return ''
+  return ai.substring(1, ai.indexOf(editorEmail) - 1)
+}
+
+export {
+  retLastYearMonthStr,
+  getJson,
+  getArticleEditor
+}
