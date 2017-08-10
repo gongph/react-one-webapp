@@ -7,6 +7,10 @@ import Footer from './Footer.js'
  */
 
 export default class Contacto extends React.Component {
+  componentDidMount () {
+    document.title = '联系我们 - 「ONE · 一个」'
+  }
+
   render () {
     return (
       <div>

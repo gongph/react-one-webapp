@@ -7,6 +7,10 @@ import Footer from './Footer.js'
  */
 
 export default class About extends React.Component {
+  componentDidMount () {
+    document.title = '关于 - 「ONE · 一个」'
+  }
+
   render () {
     return (
       <div>

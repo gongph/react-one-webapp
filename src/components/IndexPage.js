@@ -9,6 +9,10 @@ import Footer from './Footer.js'
  */
 
 export default class IndexPage extends React.Component {
+  componentDidMount () {
+    document.title = '「ONE · 一个」'
+  }
+
   render () {	
     return (
       <div>

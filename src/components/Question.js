@@ -9,6 +9,10 @@ import { getArticleEditor } from '../utils/assist.js'
  */
 
 class QuestionDetail extends React.Component {
+  componentDidMount () {
+    document.title = `${this.props.question.question_title} -「ONE · 一个」`
+  }
+
   render () {
     let question = this.props.question
     return (
