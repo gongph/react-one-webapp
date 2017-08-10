@@ -1,6 +1,6 @@
 import React from 'react'
 import path from 'path'
-import Hp from './Hp.js'
+import Hps from './Hps.js'
 import Articles from './Articles.js'
 import Questions from './Questions.js'
 import { getHps } from '../model/hp.js'
@@ -31,7 +31,7 @@ export default class MainContent extends React.Component {
     return (
       <div className="row">
         <div className="col-md-8">
-          <Hp hps={this.state.hps}/>
+          <Hps hps={this.state.hps}/>
         </div>
         <div className="col-md-4">
           <div className="row">
