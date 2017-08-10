@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 /**
  * logo
@@ -14,9 +15,9 @@ class Logo extends React.Component {
 
   render () {
     return (
-      <a className="logo">
+      <Link to="/" className="logo">
         <img src={this.state.logo}/>
-      </a>
+      </Link>
     )
   }
 }
