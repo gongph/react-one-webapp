@@ -9,6 +9,11 @@ function getQuestions () {
   return getJson(baseUrl + 'api/question/bymonth/' + retLastYearMonthStr())
 }
 
+function getQuestionById (id) {
+  return getJson(baseUrl + 'api/question/' + id)
+}
+
 export {
-  getQuestions
+  getQuestions,
+  getQuestionById
 }
