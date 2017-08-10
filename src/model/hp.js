@@ -9,6 +9,11 @@ function getHps () {
   return getJson(baseUrl + 'api/hp/bymonth/' + retLastYearMonthStr())
 }
 
+function getHpById (id) {
+  return getJson(baseUrl + 'api/hp/detail/' + id)
+}
+
 export {
-  getHps
+  getHps,
+  getHpById
 }
