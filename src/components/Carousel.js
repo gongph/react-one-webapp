@@ -1,4 +1,5 @@
 import React from 'react' 
+import { Link } from 'react-router-dom'
 
 /**
  * Bootstrap 的 Carousel 插件
@@ -14,21 +15,21 @@ class CarouselInnerItem extends React.Component {
   }
 
   render () {
-    const index = this.props.index 
+    let index = this.props.index, hp = this.props.hp
     return (
       <div className={index == 0 ? 'item active' : 'item'}>
-        <a href="#">
-          <img className="fp-one-imagen" src={this.props.hp.hp_img_url}/>
-        </a>
+        <Link to={'/one/' + hp.hpcontent_id}>
+          <img className="fp-one-imagen" src={hp.hp_img_url}/>
+        </Link>
         <div className="fp-one-imagen-footer">{this.state.hpText}</div>
         <div className="fp-one-cita-wrapper">
           <div className="fp-one-titulo-pubdate">
-            <p className="titulo">{this.props.hp.hp_title}</p>
-            <p className="dom">{new Date(this.props.hp.hp_makettime).getDate()}</p>
+            <p className="titulo">{hp.hp_title}</p>
+            <p className="dom">{new Date(hp.hp_makettime).getDate()}</p>
             <p className="may">Aug 2017</p>
           </div>
           <div className="fp-one-cita">
-            <a href="http://wufazhuce.com/one/1794">{this.props.hp.hp_content}</a>
+            <Link to={'/one/' + hp.hpcontent_id}>{hp.hp_content}</Link>
           </div>
           <div className="clearfix"></div>
         </div>
