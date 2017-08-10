@@ -1,10 +1,14 @@
 import React from 'react'
 import { render } from 'react-dom'
-import { BrowserRouter as Router, Route } from 'react-router-dom'
-import App from './components/App.js'
+import { HashRouter as Router, Route } from 'react-router-dom'
+import IndexPage from './components/IndexPage.js'
+import Article from './components/Article.js'
 
 render((
   <Router>
-    <Route path="/" component={App}/>
+    <div>
+      <Route exact path="/" component={IndexPage}/>
+      <Route path="/article/:id" component={Article}/>
+    </div>
   </Router>
-),document.getElementById('app'))
+), document.getElementById('app'))
