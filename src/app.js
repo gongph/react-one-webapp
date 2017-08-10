@@ -7,6 +7,7 @@ import Question from './components/Question.js'
 import About from './components/About.js'
 import Politica from './components/Politica.js'
 import Contacto from './components/Contacto.js'
+import Hp from './components/Hp.js'
 
 render((
   <Router>
@@ -17,6 +18,7 @@ render((
       <Route path="/acercade" component={About}/>
       <Route path="/politica" component={Politica}/>
       <Route path="/contacto" component={Contacto}/>
+      <Route path="/one/:id" component={Hp}/>
     </div>
   </Router>
 ), document.getElementById('app'))
