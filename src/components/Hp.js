@@ -60,12 +60,12 @@ export default class Hp extends React.Component {
   }
 
   render () {
-  	let hp = this.state.hp, hpDetail
-  	if (hp) {
-  	  hpDetail = <HpDetail hp={hp}/>
-  	} else {
-  	  hpDetail = ''
-  	}
+    let hp = this.state.hp, hpDetail
+    if (hp) {
+      hpDetail = <HpDetail hp={hp}/>
+    } else {
+      hpDetail = ''
+    }
 
     return (
       <div>
