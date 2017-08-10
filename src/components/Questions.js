@@ -42,7 +42,7 @@ export default class Questions extends React.Component {
   }
 
   componentDidMount () {
-    getQuestions((response) => {
+    getQuestions().then((response) => {
       let attr = response.data 
       this.setState({
         questions: attr.slice(0, 7 - attr.length)
