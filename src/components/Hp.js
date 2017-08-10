@@ -9,11 +9,11 @@ import { getHpById } from '../model/hp.js'
 
 class HpDetail extends React.Component {
   componentDidMount () {
-     document.title = `${this.props.hp.hp_title} -「ONE · 一个」`
+    document.title = `${this.props.hp.hp_title} -「ONE · 一个」`
   }
 
   render () {
-  	let hp = this.props.hp
+    let hp = this.props.hp
     return (
       <div className="one row">
         <div className="col-md-12">
