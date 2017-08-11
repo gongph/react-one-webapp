@@ -6,9 +6,19 @@ export const baseUrl = 'http://v3.wufazhuce.com:8000/'
  */
 
 function retLastYearMonthStr () {
-  const date = new Date(), year = date.getFullYear(), month = date.getMonth() + 1;
-  const yearMonthStr = `${year}-${month}`
-  return yearMonthStr
+  let date = new Date(), year = date.getFullYear(), month = date.getMonth() + 1
+  return `${year}-${month}`
+}
+
+/**
+ * 返回月-年字符串，例如：Aug 2017
+ */
+function retMonthEn () {
+  let date = new Date(), 
+      year = date.getFullYear(), 
+      month = date.getMonth(),
+      months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+  return months[month]
 }
 
 function getJson (url) {
@@ -42,5 +52,6 @@ function getArticleEditor (ai, editorEmail) {
 export {
   retLastYearMonthStr,
   getJson,
-  getArticleEditor
+  getArticleEditor,
+  retMonthEn
 }
