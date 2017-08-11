@@ -2,6 +2,7 @@ import React from 'react'
 import Header from './Header.js'
 import Footer from './Footer.js'
 import { getHpById } from '../model/hp.js'
+import { retMonthEn } from '../utils/assist.js'
 
 /**
  * 插画详情页
@@ -32,7 +33,7 @@ class HpDetail extends React.Component {
               </div>
               <div className="one-pubdate">
                 <div className="dom">{new Date(hp.hp_makettime).getDate()}</div>
-                <div className="may">Aug 2017</div>
+                <div className="may">{retMonthEn() + ' ' + new Date(hp.hp_makettime).getFullYear()}</div>
               </div>
               <div className="clearfix"></div>
             </div>

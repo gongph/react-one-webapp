@@ -1,5 +1,6 @@
 import React from 'react' 
 import { Link } from 'react-router-dom'
+import { retMonthEn } from '../utils/assist.js'
 
 /**
  * Bootstrap 的 Carousel 插件
@@ -26,7 +27,7 @@ class CarouselInnerItem extends React.Component {
           <div className="fp-one-titulo-pubdate">
             <p className="titulo">{hp.hp_title}</p>
             <p className="dom">{new Date(hp.hp_makettime).getDate()}</p>
-            <p className="may">Aug 2017</p>
+            <p className="may">{retMonthEn() + ' ' + new Date(hp.hp_makettime).getFullYear()}</p>
           </div>
           <div className="fp-one-cita">
             <Link to={'/one/' + hp.hpcontent_id}>{hp.hp_content}</Link>
